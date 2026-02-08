@@ -1,0 +1,274 @@
+%-------------------------
+% Resume in Latex
+% Author : Abey George
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+
+% If Overleaf shows: "File `glyphtounicode.tex` not found"
+% then comment the next line.
+\input{glyphtounicode}
+
+% TikZ (kept from your template; safe to keep)
+\usepackage{tikz}
+\usetikzlibrary{svg.path}
+
+\definecolor{cvblue}{HTML}{0E5484}
+\definecolor{black}{HTML}{130810}
+\definecolor{darkcolor}{HTML}{0F4539}
+\definecolor{cvgreen}{HTML}{3BD80D}
+\definecolor{taggreen}{HTML}{00E278}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+
+\colorlet{name}{black}
+\colorlet{tagline}{darkcolor}
+\colorlet{heading}{darkcolor}
+\colorlet{headingrule}{cvblue}
+\colorlet{accent}{darkcolor}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generated pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+  \item\small{
+    {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+  \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+    \textbf{\large#1} & \textbf{\small #2} \\
+    \textit{\large#3} & \textit{\small #4} \\
+  \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+  \item
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \textit{\small#1} & \textit{\small #2} \\
+  \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+  \item
+  \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+    \small#1 & \textbf{\small #2}\\
+  \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+  {\Huge \scshape RAIHAN AREFIN} \\ \vspace{1pt}
+  Dhaka, Bangladesh \\ \vspace{1pt}
+  \small
+  \href{tel:+8801727394353}{\raisebox{-0.1\height}\faPhone\ \underline{+8801727394353} ~}
+  \href{mailto:raihanarefin.cse@gmail.com}{\raisebox{-0.2\height}\faEnvelope\ \underline{raihanarefin.cse@gmail.com}} ~
+  \href{https://www.linkedin.com/in/raihanarefin/}{\raisebox{-0.2\height}\faLinkedin\ \underline{raihanarefin}} ~
+  \href{https://github.com/mr-no0b}{\raisebox{-0.2\height}\faGithub\ \underline{mr-no0b}} ~
+  \href{https://codeforces.com/profile/_ConvexHull_}{\raisebox{-0.2\height}{\includegraphics[height=1em]{cf.png}}\ \underline{\_ConvexHull\_}}
+  \vspace{-8pt}
+\end{center}
+\vspace{12pt}
+%-----------EDUCATION-----------
+\section{EDUCATION}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {Khulna University of Engineering and Technology}{2023 -- 2027}
+    {B.Sc. in Computer Science and Engineering}{Khulna, Bangladesh}
+  \resumeSubheading
+    {Dr. Mahbubur Rahman Mollah College}{2019 -- 2021}
+    {Higher Secondary School Certificate}{Dhaka, Bangladesh}
+  \resumeSubheading
+    {St. Gregory's High School \& College}{2013 -- 2019}
+    {Secondary School Certificate}{Dhaka, Bangladesh}  
+\resumeSubHeadingListEnd
+
+%-----------Competitive Programming SKILLS-----------
+\section{COMPETITIVE PROGRAMMING SKILLS}
+\begin{itemize}[itemsep=-2pt, parsep=5pt]
+    \item \textbf{Expert on Codeforces}
+    \item \textbf{4 Star on Codechef}
+    \item Solved \textbf{1500+} problems on online judges
+\end{itemize}
+\vspace{-15pt}
+
+%-----------Technical SKILLS-----------
+\section{TECHNICAL SKILLS}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    \textbf{\normalsize{Languages:}}{ \normalsize{ C, C++, Python, Java, Javascript, SQL, NoSQL}} \\
+    \textbf{\normalsize{Technologies/Frameworks:}}{\normalsize{ Linux, GitHub, MERN, Laravel}} \\
+  }}
+\end{itemize}
+\vspace{-15pt}
+
+%-----------Contest-----------
+\section{Achievements}
+\begin{itemize}[itemsep=-2pt, parsep=5pt]
+    
+    \item \href{https://toph.co/c/inter-university-buet-cse-fest-2026/standings}{\textbf{21st} in BUET Inter University Programming Contest 2025 \textit{(KUET\_Xtinction)}}
+    
+    \item \href{https://toph.co/c/mtb-presents-aust-inter-university-2025/standings}{\textbf{26th} in AUST Inter University Programming Contest \textit{(KUET\_Braindead)}}
+    
+    \item \href{https://bapsoj.org/contests/miaki-presents-kuet-iupc-onsite-2025/standings}{\textbf{28th} in KUET Inter University Programming Contest \textit{(KUET\_JINISH)}}
+    
+    \item \href{https://toph.co/c/inter-university-buet-cse-fest-2024/standings}{\textbf{28th} in BUET Inter University Programming Contest 2024 \textit{(KUET\_JINISH)}}
+    
+    \item \href{https://bapsoj.org/contests/icpc-asia-dhaka-regional-contest-2024-onsite-round/standings}{\textbf{32nd} in ICPC Asia Dhaka Regionals \textit{(KUET\_JINISH)}}
+    
+    \item \href{https://toph.co/c/uttara-university-inter-university-2025/standings}{\textbf{34th} in Uttara University Inter University Programming Contest \textit{(KUET\_Braindead)}}
+
+
+\end{itemize}
+\vspace{-15pt}
+
+%-----------PROJECTS-----------
+\section{PROJECTS}
+\vspace{-5pt}
+\resumeSubHeadingListStart
+
+  \resumeProjectHeading
+    {\href{github.com/dipraru/CourseFlow}{\textbf{\large{\underline{CourseFlow}}}} $|$ \large{\textit{Laravel}}}{}
+  \resumeItemListStart
+    \resumeItem{\normalsize{A course registration system for university}.}
+    \resumeItem{\normalsize{Students, teachers and administration can handle the registration process}.}
+  \resumeItemListEnd
+  \vspace{-13pt}
+  
+  \resumeProjectHeading
+    {\href{https://github.com/mr-no0b/FixBuddy}{\textbf{\large{\underline{FixBuddy}}}} $|$ \large{\textit{Next.js}}}{}
+  \resumeItemListStart
+    \resumeItem{\normalsize{A forum for home appliances}.}
+    \resumeItem{\normalsize{User can post, vote, answer to queries}.}
+  \resumeItemListEnd
+  \vspace{-13pt}
+
+  \resumeProjectHeading
+    {\href{https://github.com/mr-no0b/SixtyPercent}{\textbf{\large{\underline{SixtyPercent}}}} $|$ \large{\textit{Flask}}}{}
+  \resumeItemListStart
+    \resumeItem{\normalsize{An attendance tracker system}.}
+    \resumeItem{\normalsize{Provides feedback and alert to user about their attendance}.}
+  \resumeItemListEnd
+  % \vspace{-13pt}
+
+  % \resumeProjectHeading
+  %   {\href{https://github.com/mr-no0b/AcademiaOne}{\textbf{\large{\underline{AcademiaOne}}}\ \faExternalLink*} $|$ \large{\textit{Next.js}}}{}
+  % \resumeItemListStart
+  %   \resumeItem{\normalsize{A centralized website for university}.}
+  %   \resumeItem{\normalsize{It includes voting system, forum, note sharing, announcement and many other features}.}
+  % \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-12pt}
+
+
+%-----------EXPERIENCE-----------
+% \section{INTERNSHIP}
+% \resumeSubHeadingListStart
+%   \resumeSubheading
+%     {Company Name \href{certificateLink.com}{\faExternalLink*}}{MM YYYY -- MM YYYY}
+%     {\underline{Role Name}}{city, country}
+%   \resumeItemListStart
+%     \resumeItem{\normalsize{About the role \textbf{and responsibilities carried out.}}}
+%   \resumeItemListEnd
+% \resumeSubHeadingListEnd
+% \vspace{-12pt}
+
+
+
+%-----------EXTRACURRICULAR---------------
+\section{EXPERIENCES}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {\href{https://www.facebook.com/sgipc.kuet}{Special Group Interested In Programming Contest, KUET}}{2025-Present}
+    {\underline{Workshop Manager}}{}
+  \resumeItemListStart
+    \resumeItem{\normalsize{Arranged workshops for students.}}
+    \resumeItem{\normalsize{Mentored students new to competitive programming.}}
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
+% \vspace{-11pt}
+
+%-----------CERTIFICATIONS---------------
+% \section{CERTIFICATIONS}
+% % Using text-mode bullets to avoid math-mode errors from \sbullet
+% \noindent
+% \faCircle\hspace{0.15cm}\href{certificateLink.com}{ReactJS \& Redux - Udemy}\hspace{1.2cm}
+% \faCircle\hspace{0.15cm}\href{certificateLink.com}{Java}\hspace{1.2cm}
+% \faCircle\hspace{0.15cm}\href{certificateLink.com}{Command Line in Linux - Coursera}
+
+% \vspace{4pt}
+% \noindent
+% \faCircle\hspace{0.15cm}\href{certificateLink.com}{Python for Data Science - XIE}\hspace{0.95cm}
+% \faCircle\hspace{0.15cm}\href{certificateLink.com}{SQL}\hspace{1.2cm}
+% \faCircle\hspace{0.15cm}\href{certificateLink.com}{Microsoft AI Classroom - Microsoft}
+
+% \vspace{4pt}
+% \noindent
+% \faCircle\hspace{0.15cm}\href{certificateLink.com}{\textbf{5 Stars} in \textbf{C++} \& \textbf{SQL}}\hspace{0.75cm}
+% \faCircle\hspace{0.15cm}\href{certificateLink.com}{MongoDB Basics}\hspace{0.75cm}
+% \faCircle\hspace{0.15cm}\href{certificateLink.com}{NodeJS with Express \& MongoDB - Udemy}
+
+\end{document}
