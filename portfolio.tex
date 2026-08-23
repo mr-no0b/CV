@@ -5,7 +5,7 @@
 % License : MIT
 %------------------------
 
-\documentclass[letterpaper,11pt]{article}
+\documentclass[letterpaper,10pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -63,7 +63,7 @@
 % Sections formatting
 \titleformat{\section}{
   \vspace{-4pt}\scshape\raggedright\large\bfseries
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+}{}{0em}{}[\color{black}\titlerule \vspace{-3pt}]
 
 % Ensure that generated pdf is machine readable/ATS parsable
 \pdfgentounicode=1
@@ -71,9 +71,7 @@
 %-------------------------
 % Custom commands
 \newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
+  \item\small{{#1}}
 }
 
 \newcommand{\classesList}[4]{
@@ -87,21 +85,21 @@
   \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
     \textbf{\large#1} & \textbf{\small #2} \\
     \textit{\large#3} & \textit{\small #4} \\
-  \end{tabular*}\vspace{-7pt}
+  \end{tabular*}\vspace{-4pt}
 }
 
 \newcommand{\resumeSubSubheading}[2]{
   \item
-  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-    \textit{\small#1} & \textit{\small #2} \\
-  \end{tabular*}\vspace{-7pt}
+  \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
+    \textit{\large#1} & \textit{\small #2} \\
+  \end{tabular*}\vspace{-4pt}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
   \item
-  \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+  \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
     \small#1 & \textbf{\small #2}\\
-  \end{tabular*}\vspace{-7pt}
+  \end{tabular*}\vspace{-4pt}
 }
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
@@ -111,10 +109,15 @@
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.2in, topsep=2pt, itemsep=1pt, parsep=0pt, partopsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{2pt}}
 
 %-------------------------------------------
+% Codeforces icon: uses cf.png if present, otherwise falls back to text
+\newcommand{\cficon}{%
+  \IfFileExists{cf.png}{\includegraphics[height=1em]{cf.png}}{\textbf{CF}}%
+}
+
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
@@ -127,10 +130,99 @@
   \href{mailto:raihanarefin.cse@gmail.com}{\raisebox{-0.2\height}\faEnvelope\ \underline{raihanarefin.cse@gmail.com}} ~
   \href{https://www.linkedin.com/in/raihanarefin/}{\raisebox{-0.2\height}\faLinkedin\ \underline{raihanarefin}} ~
   \href{https://github.com/mr-no0b}{\raisebox{-0.2\height}\faGithub\ \underline{mr-no0b}} ~
-  \href{https://codeforces.com/profile/_ConvexHull_}{\raisebox{-0.2\height}{\includegraphics[height=1em]{cf.png}}\ \underline{\_ConvexHull\_}}
+  \href{https://codeforces.com/profile/_ConvexHull_}{\raisebox{-0.2\height}\faCode\ \underline{\_ConvexHull\_}}
   \vspace{-8pt}
 \end{center}
 \vspace{12pt}
+
+%-----------PROJECTS-----------
+\section{PROJECTS}
+\resumeSubHeadingListStart
+
+  \resumeProjectHeading
+    {\href{https://github.com/mr-no0b/AcademiaOne}{\textbf{\large{\underline{AcademiaOne}}}} $|$ \large{\textit{Next.js, TypeScript, MongoDB, Stripe}}}{}
+  \resumeItemListStart
+    \resumeItem{\normalsize{University management platform with student, teacher and admin roles covering registration, classrooms, attendance, results, elections and a Q\&A forum}.}
+  \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\href{https://github.com/mr-no0b/NexTech}{\textbf{\large{\underline{NexTech}}}} $|$ \large{\textit{Spring Boot, Java, PostgreSQL, Docker}}}{}
+  \resumeItemListStart
+    \resumeItem{\normalsize{Tech marketplace with a seller--admin--buyer approval pipeline, JUnit/Mockito tests and a GitHub Actions CI/CD pipeline}.}
+  \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\href{https://github.com/mr-no0b/HalalCompiler}{\textbf{\large{\underline{Halal Compiler}}}} $|$ \large{\textit{C, Flex, Bison}}}{}
+  \resumeItemListStart
+    \resumeItem{\normalsize{Compiler front-end transpiling a custom language to C, with postfix expressions and indentation-based scoping}.}
+  \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\href{https://github.com/dipraru/CourseFlow}{\textbf{\large{\underline{CourseFlow}}}} $|$ \large{\textit{Laravel, PHP, MySQL}}}{}
+  \resumeItemListStart
+    \resumeItem{\normalsize{Course registration system with multi-stage approval, semester and fee management, and downloadable payment slips}.}
+  \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\href{https://github.com/mr-no0b/FixBuddy}{\textbf{\large{\underline{FixBuddy}}}} $|$ \large{\textit{Next.js, TypeScript, MongoDB}}}{}
+  \resumeItemListStart
+    \resumeItem{\normalsize{Q\&A forum for home appliance repair with voting, accepted answers, reputation and an admin moderation panel}.}
+  \resumeItemListEnd
+
+  \resumeProjectHeading
+    {\href{https://github.com/mr-no0b/SixtyPercent}{\textbf{\large{\underline{SixtyPercent}}}} $|$ \large{\textit{Flask, Python, MySQL}}}{}
+  \resumeItemListStart
+    \resumeItem{\normalsize{Attendance tracker computing per-course percentages in real time and alerting students near the required threshold}.}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-12pt}
+
+%-----------CONTESTS-----------
+\section{CONTEST STANDINGS}
+\begin{itemize}[leftmargin=0.2in, itemsep=0pt, parsep=2pt, topsep=3pt]
+
+    \item \href{https://bapsoj.org/contests/icpc-asia-dhaka-regional-contest-2024-onsite-round/standings}{\textbf{32nd} in \textbf{ICPC Asia Dhaka Regional Contest 2024} \textit{(KUET\_JINISH)}}
+
+    \item \href{https://toph.co/c/khulna-regional-inter-university-kriupc/standings}{\textbf{10th} in Khulna Regional Inter University Programming Contest 2024 \textit{(KUET\_JINISH)}}
+
+    \item \href{https://www.coderoj.com/c/nwu-cse-fest-2025/standings}{\textbf{17th} in NWU Inter University Programming Contest 2025 \textit{(KUET\_BitGladiators)}}
+
+    \item \href{https://toph.co/c/inter-university-buet-cse-fest-2026/standings}{\textbf{21st} in BUET Inter University Programming Contest 2026 \textit{(KUET\_Xtinction)}}
+
+    \item \href{https://toph.co/c/mtb-presents-aust-inter-university-2025/standings}{\textbf{26th} in AUST Inter University Programming Contest 2025 \textit{(KUET\_Braindead)}}
+
+    \item \href{https://bapsoj.org/contests/miaki-presents-kuet-iupc-onsite-2025/standings}{\textbf{28th} in KUET Inter University Programming Contest 2025 \textit{(KUET\_JINISH)}}
+
+    \item \href{https://toph.co/c/duet-inter-university-2026/standings}{\textbf{32nd} in DUET Inter University Programming Contest 2026 \textit{(KUET\_Dragonite)}}
+
+
+
+    \item \href{https://toph.co/c/iut-inter-university-2026/standings}{\textbf{33rd} in IUT Inter University Programming Contest 2026 \textit{(KUET\_Dragonite)}}
+
+\end{itemize}
+\vspace{-15pt}
+
+%-----------Competitive Programming SKILLS-----------
+\section{COMPETITIVE PROGRAMMING SKILLS}
+\begin{itemize}[leftmargin=0.2in, itemsep=0pt, parsep=2pt, topsep=3pt]
+    \item \textbf{Expert} on Codeforces
+    \item \textbf{4 Star} on CodeChef
+    \item Solved \textbf{1500+} problems on online judges
+\end{itemize}
+\vspace{-8pt}
+
+%-----------Technical SKILLS-----------
+\section{TECHNICAL SKILLS}
+\begin{itemize}[leftmargin=0.2in, label={}]
+  \small{\item{
+    \textbf{\normalsize{Languages:}}{ \normalsize{ C, C++, Java, Python, PHP, JavaScript, TypeScript, SQL}} \\
+    \textbf{\normalsize{Frameworks:}}{\normalsize{ Spring Boot, Next.js, React, Node.js, Laravel, Flask}} \\
+    \textbf{\normalsize{Tools \& Databases:}}{\normalsize{ Linux, Git, Docker, GitHub Actions, PostgreSQL, MySQL, MongoDB}} \\
+  }}
+\end{itemize}
+\vspace{-15pt}
+
 %-----------EDUCATION-----------
 \section{EDUCATION}
 \resumeSubHeadingListStart
@@ -142,133 +234,25 @@
     {Higher Secondary School Certificate}{Dhaka, Bangladesh}
   \resumeSubheading
     {St. Gregory's High School \& College}{2013 -- 2019}
-    {Secondary School Certificate}{Dhaka, Bangladesh}  
-\resumeSubHeadingListEnd
-
-%-----------Competitive Programming SKILLS-----------
-\section{COMPETITIVE PROGRAMMING SKILLS}
-\begin{itemize}[itemsep=-2pt, parsep=5pt]
-    \item \textbf{Expert on Codeforces}
-    \item \textbf{4 Star on Codechef}
-    \item Solved \textbf{1500+} problems on online judges
-\end{itemize}
-\vspace{-15pt}
-
-%-----------Technical SKILLS-----------
-\section{TECHNICAL SKILLS}
-\begin{itemize}[leftmargin=0.15in, label={}]
-  \small{\item{
-    \textbf{\normalsize{Languages:}}{ \normalsize{ C, C++, Python, Java, Javascript, SQL, NoSQL}} \\
-    \textbf{\normalsize{Technologies/Frameworks:}}{\normalsize{ Linux, GitHub, MERN, Laravel}} \\
-  }}
-\end{itemize}
-\vspace{-15pt}
-
-%-----------Contest-----------
-\section{Achievements}
-\begin{itemize}[itemsep=-2pt, parsep=5pt]
-    
-    \item \href{https://toph.co/c/inter-university-buet-cse-fest-2026/standings}{\textbf{21st} in BUET Inter University Programming Contest 2025 \textit{(KUET\_Xtinction)}}
-    
-    \item \href{https://toph.co/c/mtb-presents-aust-inter-university-2025/standings}{\textbf{26th} in AUST Inter University Programming Contest \textit{(KUET\_Braindead)}}
-    
-    \item \href{https://bapsoj.org/contests/miaki-presents-kuet-iupc-onsite-2025/standings}{\textbf{28th} in KUET Inter University Programming Contest \textit{(KUET\_JINISH)}}
-    
-    \item \href{https://toph.co/c/inter-university-buet-cse-fest-2024/standings}{\textbf{28th} in BUET Inter University Programming Contest 2024 \textit{(KUET\_JINISH)}}
-    
-    \item \href{https://bapsoj.org/contests/icpc-asia-dhaka-regional-contest-2024-onsite-round/standings}{\textbf{32nd} in ICPC Asia Dhaka Regionals \textit{(KUET\_JINISH)}}
-    
-    \item \href{https://toph.co/c/uttara-university-inter-university-2025/standings}{\textbf{34th} in Uttara University Inter University Programming Contest \textit{(KUET\_Braindead)}}
-
-
-\end{itemize}
-\vspace{-15pt}
-
-%-----------PROJECTS-----------
-\section{PROJECTS}
-\vspace{-5pt}
-\resumeSubHeadingListStart
-
-  \resumeProjectHeading
-    {\href{github.com/dipraru/CourseFlow}{\textbf{\large{\underline{CourseFlow}}}} $|$ \large{\textit{Laravel}}}{}
-  \resumeItemListStart
-    \resumeItem{\normalsize{A course registration system for university}.}
-    \resumeItem{\normalsize{Students, teachers and administration can handle the registration process}.}
-  \resumeItemListEnd
-  \vspace{-13pt}
-  
-  \resumeProjectHeading
-    {\href{https://github.com/mr-no0b/FixBuddy}{\textbf{\large{\underline{FixBuddy}}}} $|$ \large{\textit{Next.js}}}{}
-  \resumeItemListStart
-    \resumeItem{\normalsize{A forum for home appliances}.}
-    \resumeItem{\normalsize{User can post, vote, answer to queries}.}
-  \resumeItemListEnd
-  \vspace{-13pt}
-
-  \resumeProjectHeading
-    {\href{https://github.com/mr-no0b/SixtyPercent}{\textbf{\large{\underline{SixtyPercent}}}} $|$ \large{\textit{Flask}}}{}
-  \resumeItemListStart
-    \resumeItem{\normalsize{An attendance tracker system}.}
-    \resumeItem{\normalsize{Provides feedback and alert to user about their attendance}.}
-  \resumeItemListEnd
-  % \vspace{-13pt}
-
-  % \resumeProjectHeading
-  %   {\href{https://github.com/mr-no0b/AcademiaOne}{\textbf{\large{\underline{AcademiaOne}}}\ \faExternalLink*} $|$ \large{\textit{Next.js}}}{}
-  % \resumeItemListStart
-  %   \resumeItem{\normalsize{A centralized website for university}.}
-  %   \resumeItem{\normalsize{It includes voting system, forum, note sharing, announcement and many other features}.}
-  % \resumeItemListEnd
-
+    {Secondary School Certificate}{Dhaka, Bangladesh}
 \resumeSubHeadingListEnd
 \vspace{-12pt}
 
-
-%-----------EXPERIENCE-----------
-% \section{INTERNSHIP}
-% \resumeSubHeadingListStart
-%   \resumeSubheading
-%     {Company Name \href{certificateLink.com}{\faExternalLink*}}{MM YYYY -- MM YYYY}
-%     {\underline{Role Name}}{city, country}
-%   \resumeItemListStart
-%     \resumeItem{\normalsize{About the role \textbf{and responsibilities carried out.}}}
-%   \resumeItemListEnd
-% \resumeSubHeadingListEnd
-% \vspace{-12pt}
-
-
-
-%-----------EXTRACURRICULAR---------------
+%-----------EXPERIENCES---------------
 \section{EXPERIENCES}
 \resumeSubHeadingListStart
   \resumeSubheading
-    {\href{https://www.facebook.com/sgipc.kuet}{Special Group Interested In Programming Contest, KUET}}{2025-Present}
-    {\underline{Workshop Manager}}{}
+    {\href{https://www.facebook.com/sgipc.kuet}{Special Group Interested In Programming Contest, KUET}}{}
+    {\underline{Vice President}}{Aug 2026 -- Present}
   \resumeItemListStart
-    \resumeItem{\normalsize{Arranged workshops for students.}}
-    \resumeItem{\normalsize{Mentored students new to competitive programming.}}
+    \resumeItem{\normalsize{Lead the club's contest, training and recruitment activities.}}
+  \resumeItemListEnd
+  \vspace{-5pt}
+  \resumeSubSubheading
+    {\underline{Workshop Manager}}{Sep 2025 -- Aug 2026}
+  \resumeItemListStart
+    \resumeItem{\normalsize{Arranged workshops and mentored students new to competitive programming.}}
   \resumeItemListEnd
 \resumeSubHeadingListEnd
-% \vspace{-11pt}
-
-%-----------CERTIFICATIONS---------------
-% \section{CERTIFICATIONS}
-% % Using text-mode bullets to avoid math-mode errors from \sbullet
-% \noindent
-% \faCircle\hspace{0.15cm}\href{certificateLink.com}{ReactJS \& Redux - Udemy}\hspace{1.2cm}
-% \faCircle\hspace{0.15cm}\href{certificateLink.com}{Java}\hspace{1.2cm}
-% \faCircle\hspace{0.15cm}\href{certificateLink.com}{Command Line in Linux - Coursera}
-
-% \vspace{4pt}
-% \noindent
-% \faCircle\hspace{0.15cm}\href{certificateLink.com}{Python for Data Science - XIE}\hspace{0.95cm}
-% \faCircle\hspace{0.15cm}\href{certificateLink.com}{SQL}\hspace{1.2cm}
-% \faCircle\hspace{0.15cm}\href{certificateLink.com}{Microsoft AI Classroom - Microsoft}
-
-% \vspace{4pt}
-% \noindent
-% \faCircle\hspace{0.15cm}\href{certificateLink.com}{\textbf{5 Stars} in \textbf{C++} \& \textbf{SQL}}\hspace{0.75cm}
-% \faCircle\hspace{0.15cm}\href{certificateLink.com}{MongoDB Basics}\hspace{0.75cm}
-% \faCircle\hspace{0.15cm}\href{certificateLink.com}{NodeJS with Express \& MongoDB - Udemy}
 
 \end{document}
